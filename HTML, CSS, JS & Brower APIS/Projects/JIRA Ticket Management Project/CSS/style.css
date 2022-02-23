@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.toolbox-cont > *{
+    margin-left: 4rem;
+}
+.toolbox-cont {
+
+    height: 5rem;
+    background-color: #384155;
+    display: flex;
+    align-items: center;
+    
+}
+
+.toolbox-priority-cont
+{
+    height: 3.5rem;
+    width: 20rem;
+    background-color: #57606f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.action-btn-cont
+{
+    height: 3.5rem;
+    width: 8rem;
+    background-color: #57606f;
+    border-radius: 10px;
+    display: flex;
+}
+
+.action-btn-cont > *{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #dcdde1;
+}
+
+.action-btn-cont > *:hover{
+    background-color: #2f3640;
+}
+.color
+{
+    height: 2rem;
+    width: 3rem;
+}
+
+.lightpink
+{
+    background-color: lightpink;
+}
+
+.lightblue
+{
+    background-color: lightblue;
+}
+
+.lightgreen
+{
+    background-color: lightgreen;
+}
+
+.black
+{
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+/* Modal */
+.modal-cont
+{
+    height: 50vh;
+    width: 40vw;
+    background-color: red;
+    position: absolute;
+    top: calc((100vh - 45vh)/2);
+    left: calc((100vw - 40vw)/2);
+
+    display: none;
+
+}
+
+.textarea-cont{
+    height: 100%;
+    width: 75%;
+    border: none;
+    outline: none;
+    /* background-color: #f5f6fa; */
+    background-color: #a5b1c2;
+
+    resize: none;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.priority-color-cont
+{
+    height: 100%;
+    width: 25%;
+    background-color: #57606f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.priority-color
+{
+    height: 15%;
+    width: 55%;
+}
+
+.border{
+    border: 5px solid #f5f6fa;
+}
+
+
+
+/* Ticket Styling */
+.main-cont
+{
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.ticket-cont
+{
+    height: 15rem;
+    width: 18rem;
+    background-color: #dcdde1;
+}
+
+.ticket-color
+{
+    height: 1.5rem;
+    background-color:#d1d8e0;
+}
+
+.ticket-id
+{
+    height: 2.5rem;
+    padding: 3%;
+}
+
+.task-area
+{
+    height: calc(100% - 4rem);
+    padding: 3%;
+}
