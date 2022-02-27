@@ -51,6 +51,12 @@ body{
 .action-btn-cont > *:hover{
     background-color: #2f3640;
 }
+
+.removeactiveColor
+{
+    background-color: #2f3640;
+}
+
 .color
 {
     height: 2rem;
@@ -147,15 +153,16 @@ body{
 }
 .ticket-cont
 {
-    height: 15rem;
     width: 18rem;
     background-color: #dcdde1;
+    overflow-wrap: break-word;
+    overflow: auto;
 }
+
 
 .ticket-color
 {
     height: 1.5rem;
-    background-color:#d1d8e0;
 }
 
 .ticket-id
@@ -166,6 +173,16 @@ body{
 
 .task-area
 {
-    height: calc(100% - 4rem);
-    padding: 3%;
+    height: calc(100% - 4rem - 2.5rem);
+    padding: 5%;
+    outline: none;
+}
+
+.lock-icon
+{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    color: #95a5a6;
 }
