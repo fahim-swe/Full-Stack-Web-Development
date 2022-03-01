@@ -2,6 +2,10 @@ console.log("Hello");
 
 let addBtn = document.querySelector(".add-btn");
 
+let toolBoxColors = document.querySelectorAll(".color");
+
+let allColors = document.querySelector(".all-tool-color")
+
 let removeBtn = document.querySelector(".remove-btn");
 
 let modalCont = document.querySelector(".modal-cont");
@@ -18,11 +22,60 @@ let modalPriorityColor = colors[colors.length-1];
 let selectColorNote = document.querySelector(".ticket-id");
 
 
+let ticketArr = [];
+
 
 
 
 let addFlag= false;
 let removeFlag = false;
+
+function addMarketonToolColors()
+{
+    for(let i = 0; i < toolBoxColors.length; i++)
+    {
+        if(toolBoxColors[i].classList.contains("border")){
+            toolBoxColors[i].classList.remove("border");
+        }
+    }
+}
+for(let i = 0; i < toolBoxColors.length; i++)
+{
+    toolBoxColors[i].addEventListener("click", (e)=>{
+    
+        addMarketonToolColors();
+        toolBoxColors[i].classList.add("border");
+
+        let currentToolBoxColor = toolBoxColors[i].classList[0];
+
+
+        for(let i = 0; i < ticketArr.length; i++)
+        {
+            let arr = ticketArr[i];
+            if(arr.titleColor != currentToolBoxColor){
+                arr.ticketCont.style.display = "none";
+            }
+            else{
+                arr.ticketCont.style.display = "block";
+            }
+
+            if(currentToolBoxColor == "all-tool-color"){
+                arr.ticketCont.style.display = "block";
+            }
+        }
+    })
+
+    toolBoxColors[i].addEventListener("dblclick", (e) => {
+        
+        for(let i = 0; i < ticketArr.length; i++)
+        {
+            let arr = ticketArr[i];
+
+            console.log(arr.ticketCont.style.display);
+        }
+    })
+}
+
 
 
 addBtn.addEventListener("click", (e) => {
@@ -103,6 +156,8 @@ function createTicket(titleColor, ticketTask, ticketID)
     `;
 
     mainCont.appendChild(ticketCont);
+
+    ticketArr.push({ticketCont, titleColor, ticketTask, ticketID});
 
     let ticketLockElem = ticketCont.querySelector(".lock-icon");
     let ticketLock = ticketLockElem.children[0];

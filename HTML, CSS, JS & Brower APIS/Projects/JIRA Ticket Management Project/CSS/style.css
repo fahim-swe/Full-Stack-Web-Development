@@ -68,6 +68,12 @@ body{
     background-color: lightpink;
 }
 
+.all-tool-color
+{
+    text-align: center;
+    color: white;
+    font-size: large;
+}
 .lightblue
 {
     background-color: lightblue;
@@ -151,6 +157,7 @@ body{
     gap: 2rem;
     justify-content: center;
 }
+
 .ticket-cont
 {
     width: 18rem;
