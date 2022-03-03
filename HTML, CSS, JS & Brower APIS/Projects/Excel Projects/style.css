@@ -131,7 +131,48 @@ body{
 
 
 
+/* Grid */
 .grid-cont
 {
     height: calc(100vh - 3rem - 3rem - 3rem - 3rem);
+    position: relative;
+    overflow: scroll;
+    background-color: #dfe4ea;
+}
+
+
+.top-left-dummy-box
+{
+    width: 2rem;
+    height: 2rem;
+    background-color: #747d8c;
+}
+
+.address-col-cont
+{
+    height: 10rem;
+    width: 2rem;
+}
+
+.address-row-cont
+{
+    
+    background-color: yellow;
+}
+
+.cells-cont
+{
+    position: absolute;
+    top: 0;
+    left: 2rem;
+
+    height: 10rem;
+    
+}
+
+.address-col{
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    border: 1px solid #cccbcb;
 }
