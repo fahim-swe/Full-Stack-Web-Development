@@ -87,6 +87,7 @@ body{
 .address-bar
 {
     width: 5rem;
+    text-align: center;
 }
 
 .sheet-actions-cont
@@ -137,7 +138,6 @@ body{
     height: calc(100vh - 3rem - 3rem - 3rem - 3rem);
     position: relative;
     overflow: scroll;
-    background-color: #dfe4ea;
 }
 
 
@@ -146,33 +146,65 @@ body{
     width: 2rem;
     height: 2rem;
     background-color: #747d8c;
+    position: fixed;
+    z-index: 5;
 }
 
 .address-col-cont
 {
-    height: 10rem;
-    width: 2rem;
+    position: sticky;
+    top: 2rem;
+    left: 0;
 }
 
 .address-row-cont
 {
-    
-    background-color: yellow;
+    display: flex;
+    position: sticky;
+    left: 2rem;
+    top: 0;
+    background-color: lightgrey;
 }
 
 .cells-cont
 {
     position: absolute;
     top: 0;
-    left: 2rem;
-
-    height: 10rem;
-    
+    left: 2rem; 
 }
 
 .address-col{
     height: 2rem;
     width: 2rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #cccbcb;
 }
+
+.address-row
+{
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-cont
+{
+    display: flex;
+}
+.cell
+{
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+
