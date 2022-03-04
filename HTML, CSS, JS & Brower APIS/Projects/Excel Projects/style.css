@@ -207,4 +207,7 @@ body{
     outline: none;
 }
 
-
+.cellCol
+{
+    background-color: lightseagreen
+}
