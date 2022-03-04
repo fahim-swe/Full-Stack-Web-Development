@@ -46,6 +46,25 @@ for(let i = 0; i < row; i++)
     gridCells.appendChild(rowCont);
 }
 
+// marked selected row col
+function selectedRowCol(i,j)
+{
+    let cellCol = document.querySelectorAll(".address-row");
+    let cellRow = document.querySelectorAll(".address-col");
+
+    cellCol[j].classList.add("cellCol");
+
+    for(let c = 0; c < col; c++){
+        cellCol[c].classList.remove("cellCol");
+    }
+    
+    cellCol[j].classList.add("cellCol");
+
+    for(let r = 0; r < row; r++){
+        cellRow[r].classList.remove("cellCol");
+    }
+    cellRow[i].classList.add("cellCol");
+}
 
 function addListenerForAddressBarDisplay(cell, i, j)
 {
@@ -55,7 +74,8 @@ function addListenerForAddressBarDisplay(cell, i, j)
 
         addressbar.value = ` ${colID}${rowID}`;
 
-        
+        selectedRowCol(i,j);
+
     })
 }
 
