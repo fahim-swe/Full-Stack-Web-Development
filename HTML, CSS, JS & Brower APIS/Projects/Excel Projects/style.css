@@ -65,6 +65,10 @@ body{
     outline: none;
 }
 
+.cellprops-actions-cont > *:hover{
+    cursor: pointer;
+}
+
 .formula-actions-cont
 {
     height: 3rem;
@@ -90,7 +94,6 @@ body{
 .formula-icon
 {
    
-    
 }
 
 .formula-bar
@@ -214,10 +217,6 @@ body{
     height: 2rem;
     width: 5rem;
     border: 1px solid #dfe4ea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
 }
 
 .cellCol
