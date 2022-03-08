@@ -17,7 +17,9 @@ for(let i = 0; i < row; i++)
             fontFamily : "monospace",
             fontSize : "14",
             fontColor : '#000',
-            BGcolor : '#fff'  // just for indication
+            BGcolor : '#fff',  // just for indication
+            value: ""
+
         }
         sheetRow.push(cellProp);
     }
@@ -200,6 +202,18 @@ cells.forEach((cell) => {
         fontColorBg.style.color = cellProp.fontColor;
         cellColorBg.style.backgroundColor = cellProp.BGcolor;
 
+    })
+
+    // Store value in SheetBB
+    cell.addEventListener("blur", (e) => {
+        // console.log(cell.innerText);
+
+        
+        let rid = cell.attributes.rid.value;
+        let cid = cell.attributes.cid.value;
+        sheetBD[rid][cid].value = cell.innerText;
+
+        // console.log(sheetBD[rid][cid]);
     })
 })
 
