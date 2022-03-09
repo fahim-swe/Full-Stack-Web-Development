@@ -77,7 +77,7 @@ function addListenerForAddressBarDisplay(cell, i, j)
         let rowID = i+1;
         let colID = String.fromCharCode(j+65);
 
-        addressbar.value = ` ${colID}${rowID}`;
+        addressbar.value = `${colID}${rowID}`;
 
         selectedRowCol(i,j);
 

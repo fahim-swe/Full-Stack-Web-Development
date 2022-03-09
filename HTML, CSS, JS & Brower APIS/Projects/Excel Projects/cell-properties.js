@@ -18,8 +18,9 @@ for(let i = 0; i < row; i++)
             fontSize : "14",
             fontColor : '#000',
             BGcolor : '#fff',  // just for indication
-            value: ""
-
+            value: "",
+            formula: "",
+            children: []
         }
         sheetRow.push(cellProp);
     }
@@ -40,6 +41,8 @@ let BGcolor = document.querySelector(".BGcolor-prop");
 let leftAlign = document.querySelector(".left");
 let centerAlign = document.querySelector(".center");
 let rightAlign = document.querySelector(".right");
+
+let formulaBar = document.querySelector(".formula-bar");
 
 let cells = document.querySelectorAll(".cell");
 
@@ -137,6 +140,7 @@ BGcolor.addEventListener("change", (e)=> {
 alignment.forEach((alignElem) => {
     alignElem.addEventListener("click", (e) =>{
         
+
         let [cell, cellProp] = activecell(addressbar.value);
 
         let alignValue = e.target.classList[0];
@@ -189,6 +193,8 @@ cells.forEach((cell) => {
         cell.style.backgroundColor = cellProp.BGcolor;
         cell.style.textAlign =  cellProp.alignment;
 
+        formulaBar.value = cellProp.formula;
+
         
 
         // Work on sell Actions
@@ -204,7 +210,7 @@ cells.forEach((cell) => {
 
     })
 
-    // Store value in SheetBB
+    // Store value in SheetB
     cell.addEventListener("blur", (e) => {
         // console.log(cell.innerText);
 
@@ -241,8 +247,9 @@ function activecell(address)
 
 function decodeRIDCIDFromAddress(address)
 {
-    let rid = Number(address.slice(2) - 1);
-    let cid = Number(address.charCodeAt(1)-65);
+    
+    let rid = Number(address.slice(1)-1);
+    let cid = Number(address.charCodeAt(0)-65);
 
     return [rid, cid];
 }   
