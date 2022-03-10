@@ -220,6 +220,8 @@ cells.forEach((cell) => {
         sheetBD[rid][cid].value = cell.innerText;
 
         // console.log(sheetBD[rid][cid]);
+
+        
     })
 })
 

@@ -33,7 +33,11 @@ function updateChildrenCells(parentAddress)
     let child = cellProp.children;
 
     for(let i = 0; i < child.length; i++){
-        console.log(child[i]);
+        
+        
+       
+
+    
         updateChildrenCells(child[i]);
     }
 }
