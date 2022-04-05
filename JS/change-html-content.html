@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="fbpage">
+        <p>Facebook</p>
+    </div>
+
+    <div id="list">Apple</div>
+
+    <button id = "changeFb">Change FB </button>
+    <button id = "appleList">Apple list</button>
+    <script>
+
+        document.getElementById("changeFb").onclick = function()
+        {
+            let fb_page = document.querySelector(".fbpage");
+            fb_page.innerHTML = `
+                <p>Welcome to fb page</p>
+            `
+        }
+
+        document.getElementById("appleList").onclick = function()
+        {
+            document.getElementById("list").innerHTML = `
+                <ul>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>

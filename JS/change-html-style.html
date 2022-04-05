@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id = "fb">
+        Facebook
+    </div>
+    
+    <div id = "google">
+        Google
+    </div>
+
+    <div id = "amazon">
+        Amazon
+    </div>
+
+    <button id = "fb-btn">Facekook</button>
+    <button id = "google-btn">Google</button>
+    <button id = "amazon-btn">Amazon</button>
+
+    <script>
+        document.getElementById("fb-btn").onclick = function()
+        {
+            document.getElementById("fb").style.background = "red";
+        }
+
+        document.getElementById("google-btn").onclick = function()
+        {
+            document.getElementById("google").style.background = "green";
+        }
+
+        document.getElementById("amazon-btn").onclick = function()
+        {
+            document.getElementById("amazon").style.background = "#AA0000";
+        }
+    </script>
+    
+</body>
+</html>

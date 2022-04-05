@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #fb
+        {
+            background-color: yellow;
+            height: 100px;
+        }
+
+        #google
+        {
+            background-color: aqua;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="fb">
+        <p>Facebook</p>
+    </div>
+
+    <div id="google">
+        <p>Google</p>
+    </div>
+
+    <button id = "swap">Swap</button>
+
+    <script>
+
+        document.getElementById("swap").onclick = function()
+        {
+            var id1 = document.getElementById("fb");
+            var id2 = document.getElementById("google");
+
+            swap(id1,id2);
+        }
+        function swap(id1, id2)
+        {
+            var x = id1.innerHTML;
+            var y = id2.innerHTML;
+
+            id1.innerHTML = y;
+            id2.innerHTML = x;
+        }
+    </script>
+</body>
+</html>
