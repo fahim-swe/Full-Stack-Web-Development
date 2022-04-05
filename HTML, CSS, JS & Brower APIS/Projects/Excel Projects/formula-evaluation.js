@@ -20,7 +20,7 @@ formulaBar.addEventListener("keydown", (e)=>{
         addChildToParent(inputFormula); 
 
         // update depended children
-        updateChildrenCells(addressbar.value)
+        updateChildrenCells(addressbar.value);
         
     }
 })
@@ -31,13 +31,22 @@ function updateChildrenCells(parentAddress)
     let [cell, cellProp] = activecell(parentAddress);
 
     let child = cellProp.children;
+    
+    
 
     for(let i = 0; i < child.length; i++){
         
-        
-       
+        let children = child[i];
 
-    
+        let [childCell, childCellProp] = activecell(children);
+
+        console.log(childCell);
+        console.log(childCellProp);
+        
+
+        let evaluatedValue = evaluateFormula(childCellProp.formula);
+        childCell.innerText = evaluatedValue;
+        
         updateChildrenCells(child[i]);
     }
 }
