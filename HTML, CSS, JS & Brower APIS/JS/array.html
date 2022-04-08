@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id = "js">Javascript</p>
+
+    <script>
+
+        function showResult(x){
+            document.getElementById("js").innerHTML += "<br/>" + x;
+        }
+
+        var shoppingList = ["bread", "eggs", "milk"];
+        showResult(shoppingList);
+
+        showResult(shoppingList[0]);
+        showResult(shoppingList.splice(1,1));
+
+        shoppingList.sort();
+        showResult(shoppingList);
+        shoppingList.reverse();
+        showResult(shoppingList);
+
+        shoppingList.push("add");
+        
+        showResult(shoppingList);
+
+        showResult(shoppingList.length);
+        shoppingList.splice(1,2);
+        showResult(shoppingList.length);
+        
+        var myString = "what is weather like ?";
+        showResult(myString);
+        
+        var myArray = myString.split(' ', myString.length);
+        showResult(myArray);
+        
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function phone(make, model, warranty, color)
+        {
+            this.make = make;
+            this.model = model;
+            this.warranty = warranty;
+            this.color = color;
+            
+            this.extendWarranty = function(x){
+                this.warranty += x;
+            }
+        }
+
+        var myPhone = new phone("Apple", "Iphone 5", 12, "white");
+        console.log("My phone: ");
+        console.log(myPhone);
+
+        console.log("Extend Warranty: 12");
+        myPhone.extendWarranty(12);
+
+        console.log(myPhone);
+        console.log("my Phone warranty =", myPhone.warranty);
+
+        myPhone.condition = "like new";
+        console.log("Phone condition ", myPhone.condition);
+        console.log(myPhone);
+
+        // console.log(myPhone);
+
+        // console.log(myPhone.condition)
+
+
+        var myBrothersPhone = new phone("Apple", "Iphone 4", 6, "black");
+        console.log(myBrothersPhone);
+
+        console.log(myBrothersPhone.condition);
+
+        phone.prototype.condition = "new";
+        console.log(myBrothersPhone.condition);
+
+
+        console.log(phone);
+        console.log(new phone);
+        console.log(phone.condition);
+
+    </script>
+</body>
+</html>
