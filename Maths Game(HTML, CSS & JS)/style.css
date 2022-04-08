@@ -1,0 +1,121 @@
+
+
+body{
+    background-color: gainsboro;
+}
+
+
+.container
+{
+    background-color: lightskyblue;
+    height: 450px;
+    width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px rgb(54, 167, 101);
+    position: relative;
+}
+
+
+.box1
+{
+    height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.score{
+    height: 50px;
+    width: 80px;
+    background-color: yellow;
+    box-shadow: 0px 4px 0px 0px rgb(54, 167, 101);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box2
+{
+    height: 220px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question
+{
+    font-size: 7rem;
+    font-family: sans-serif;
+    font-style: bold;
+}
+
+.box3
+{
+    height: 50px;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.box4
+{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+.box5
+{
+   
+    height: 40px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.btn
+{
+    height: 70px;
+    width: 20%;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.btn2
+{
+    height: 40px;
+    width: auto;
+    padding: 10px;
+    background-color: rgba(6, 226, 101, 0.356);
+    border: none;
+}
+
+.timeRemin{
+    background-color: aqua;
+}
+
+.gameOver
+{
+    height: 210px;
+    width: 500px;
+    background-color: yellowgreen;
+    position: absolute;
+    top: calc(25%);
+    left: auto;
+    right: auto;
+    font-size: 2rem;
+    text-align: center;
+    display: none;
+}
+
+

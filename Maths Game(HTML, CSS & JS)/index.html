@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    
+
+    <div class="container">
+       
+        <div class="box1">
+            <div class="score">Score : 
+                <span>0</span>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="question">
+                <span id="num1">1</span>
+                *
+                <span id="num2">2</span>
+            </div>
+          
+        </div>
+        <div class="box3">
+            <p>Click on the correct answer</p></div>
+        <div class="box4">
+
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+
+        </div>
+        <div class="box5">
+            <button class="btn2" onclick="generateQuestion()">
+                START
+            </button>
+            <span class="timeRemin">TimeRemining: 0</span>
+        </div>
+        
+        <div id = "gameOver"class="gameOver">
+            <p>Game Over</p>
+            <p>Your Score is <span id="result">0</span></p>
+        </div>
+    </div>
+
+   
+
+    <script src="/program.js"> 
+
+    </script>
+</body>
+</html>
