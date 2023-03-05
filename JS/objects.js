@@ -1,85 +1,48 @@
-// In Java Hashmap
-// In C++, Map
-
-// Object -> group of key value pair
-// Key: value
-
-// {key: "value"}
-// key: value -> property
-// key: function -> method
-
-
-let person = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50,
-    eyeColor: "blue",
-    address: {
-        city: "New york",
-        zipCode : 1234
-    },
-    sayHi: function(){
-        console.log("Hi, This is Jon");
-    }
+ // Object -> group of key: value pair 
  
-};
+ let cap = {
+    name : "Steve", 
+    lastName : "Rogers",
+    address : {
+        city : "City of Steve"
+    },
+    age : 25,
+    isAvenger : true,
+    movies : ["First Avenger", "winter soldier", "civil war"],
+    sayHi : function(){
+        console.log("Cap say's Hi");
+    }
+
+ };
 
 
-console.log(person);
-console.log(person.sayHi());
-console.log(person.address);
+//  // get object 
+// console.log(cap.name);
+// console.log(cap.address);
+// console.log(cap.movies);
+// cap.sayHi();
+// console.log(cap);
 
-console.log("...........................");
-
-// Update person object
-person.age = 45;
-person.address.city = "New York Area";
-person.address.zipCode = 1111;
-
-// Set value in Object
-person.favorateMovie = ["Avenger 1", "Captain Anerica", "Infinity War"];
-
-console.log("........................");
-console.log(person.age);
-console.log(person.address);
-console.log(person.favorateMovie);
+// // SET/UPDATE 
+// cap.age = 36;
+// cap.isAvenger = false;
+// cap.friends = ["tony", "bruce", "peter"];
+// console.log("-----------------------");
+// console.log(cap);
 
 
-// Delete key
-delete person.address;
+// // Delete 
+// delete cap.address;
+// console.log(cap);
 
-console.log(person.address);
 
-
-console.log("...........................");
-// loop in object
-for(let key in person){
-    console.log(key, " : ", person[key]);
+for(let key in cap)
+{
+    console.log(key, " ", cap[key]);
 }
 
-
-
-console.log("..................................");
 let propKey = "age";
-console.log(person[propKey]);
-console.log(person["age"]);
-console.log(person.age);
-
-
-// . and []   . indicate the value, [] search a value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// cout << cap[propKey] << endl;
+// console.log(cap.age);
+// console.log(cap["age"]);
+console.log(cap[propKey]);

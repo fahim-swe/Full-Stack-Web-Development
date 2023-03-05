@@ -1,48 +1,37 @@
-console.log("Hello JS");
+console.log("Hello Js");
 
-// declare variable
 let a;
-console.log(a); // undefine
+console.log(a); // undefine variables
 
 a = 10;
+console.log(typeof(a));
+a = 10.5;
+console.log(typeof(a));
+
 console.log(a);
-a = 10.1;
+a = "Hello, I am a string";
 console.log(a);
-a = "Hello I am a string";
-console.log(a);
-a = 'Hello I am also string';
+a = [1, 2, 3, 4];
 console.log(a);
 
-
-// variable types: primitive: number, string, boolean, null
-console.log("Type of variable: "+typeof(a));
-a = true;
-console.log("Type of variable: " + a);
+// variable types: Primitive types: number, string, boolean, null 
+a = null;
+console.log(a);
 
 
-
-
-
-// JS -> Java (syntaxtically similler to Java)
-let number = 10;
-for(let i = 1; i <= number; i++){
-    console.log("Number is: " + i);
-}
-
-// is Prime check
-number = 23;
+// Loop
+let number = 23;
 let flag = true;
 
-for(let i = 2; i < number; i++){
-    if(number % i == 0){
+for(let div = 2; div < number; div++){
+    if(number % div == 0){
         flag = false;
-        break;
     }
 }
 
 if(flag){
-    console.log(number, " is prime");
+    console.log("Prime number");
 }
-else{
-    console.log(number, " is not prime");
+else {
+    console.log("Not prime");
 }

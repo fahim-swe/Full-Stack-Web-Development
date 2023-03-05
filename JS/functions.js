@@ -1,32 +1,27 @@
-// Non-primitive => array, objects, objects
-
-
-// Functions-> No return time
+// Non primitive -> array, object, function 
 
 function sayHi()
 {
-    console.log("Hello from sayHi");
-}
-
-// with paratemter
-function withParameter(param)
-{
-    console.log("Funtion with parameter");
-    console.log("Param recieved:  ",param );
-}
+    console.log("Hello, from Say hi");
 
 
-// with return type
-function withReturnType(param)
-{
-    console.log("param recievd: ", param);
-    return "return from with Return Type";
 }
 
 sayHi();
-withParameter(10);
-withParameter("Hellow");
 
-let rVal = withReturnType([1, 2, 3, 4, 5]);
+function sayHi(param)
+{
+    console.log("Hello, from say Hi");
+    console.log("Param recieved", param);
 
+    let rVal =  Math.random() > 0.5 ? true : "Less than 0.5";
+    return rVal;
+}
+
+sayHi(10);
+sayHi("Hello");
+sayHi([1, 2, 3, 4, 5]);
+
+let rVal = sayHi([1, 2, 3, 4, 5]);
+console.log(rVal);
 
